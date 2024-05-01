@@ -2,7 +2,7 @@
 
 exports.checkCsrfErro = (err, req, res, next) =>{
     console.log('passou pela checagem')
-    if(err && (err.code === 'EBADCSRFTOKEN')){
+    if(err){
         console.log('404')
         return res.render('404');
     }
@@ -12,11 +12,12 @@ exports.checkCsrfErro = (err, req, res, next) =>{
 
 exports.criarTokenCsrf = (err,req,res,next) =>{
     res.locals.csrfToken = req.csrfToken();
-    next()
+    next();
 }
 
 
 exports.middlewareGlobal = (req,res,next) =>{
-    console.log('passei pelo middleware global')
+    res.locals.erros= req.flash('erros');
+    res.locals.sucessos = req.flash('sucessos')
     next()
 }

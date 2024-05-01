@@ -12,9 +12,8 @@ route.get('/',homeController.index);
 
 // rotas pagina de login
 
-route.get('/login',loginController.index);
-route.post('/login/cadastrar',(req,res) =>{
-    res.send()
-});
+route.get('/login/index',loginController.index);
+route.post('/login/cadastrar',loginController.cadastrar);
+route.post('/login/login',loginController.login);
 
 module.exports = route;

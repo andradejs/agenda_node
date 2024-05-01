@@ -7,21 +7,21 @@
                 <div class="col-lg-8 my-3">
                     <h1 class="text-center">Login</h1>
                     <p class="text-center lead">Faça o login ou crie sua conta logo</p>
+                    <%- include('includes/mensagens')   %>
                     <div class="row">
                         <div class="col-lg">
                             <h4>Faça seu cadastro</h4>
                             <form action="/login/cadastrar" method="POST">
-                                
                                 <div class="form-group">
                                     <label>Coloque seu Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <input name="email" type="text" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="usuario@gmai.com">
                                     <small id="emailHelp" class="form-text text-muted">Nunca compartilhe seu email com
                                         alguem</small>
                                 </div>
                                 <div class="form-group">
                                     <label>Senha</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                    <input name="senha" type="password" class="form-control" id="exampleInputPassword1"
                                         placeholder="senha">
                                 </div>
 
@@ -30,18 +30,18 @@
                         </div>
                         <div class="col-lg">
                             <h4>Entrar no sistema</h4>
-                            <form action="login/login" method="post">
-
+                            <form action="/login/login" method="post">
+                                
                                 <div class="form-group">
                                     <label>Coloque seu Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <input name = "email" type="email" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="usuario@gmai.com">
                                     <small id="emailHelp" class="form-text text-muted">Nunca compartilhe seu email com
                                         alguem</small>
                                 </div>
                                 <div class="form-group">
                                     <label>Senha</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                    <input name="email" type="password" class="form-control" id="exampleInputPassword1"
                                         placeholder="senha">
                                 </div>
 
