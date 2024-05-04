@@ -48,11 +48,11 @@ app.use(flash())
 app.set(`views`,path.resolve(__dirname,'src','views'));
 app.set(`view engine`,'ejs');
 
-app.use(cookieParser())
+app.use(cookieParser());
 app.use(csrf({cookie:true}));
 app.use(criarTokenCsrf);
 app.use(checkCsrfErro);
-app.use(middlewareGlobal)
+app.use(middlewareGlobal);
 
 app.use(routes);
 
