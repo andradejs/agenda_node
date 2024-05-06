@@ -9,30 +9,37 @@
                     <p class="text-center lead">Crie ou edite seus contatos abaixo</p>
 
                     <%- include('includes/mensagens')%>
-                        <form action="/contatos/criar" method="POST">
-                            <div class="form-group">
-                                <label>Nome</label>
-                                <input value="<%= contato.nome%>" name="nome" type="text" class="form-control"
-                                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                            </div>
-                            <div class="form-group">
-                                <label>Sobrenome</label>
-                                <input value="<%= contato.sobrenome %>" name="sobrenome" type="text" class="form-control"
-                                    id="exampleInputPassword1" placeholder="">
-                            </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input value="<%= contato.email %>" name="email" type="text" class="form-control"
-                                    id="exampleInputPassword1" placeholder="">
-                            </div>
-                            <div class="form-group">
-                                <label>Telefone</label>
-                                <input value="<%= contato.telefone %>" name="telefone" type="text" class="form-control"
-                                    id="exampleInputPassword1" placeholder="">
-                            </div>
 
-                            <button type="submit" class="btn btn-primary">Salvar</button>
-                        </form>
+                        <%if (contato._id){%>
+                            <form class="form-contatos" action="/contatos/editar/<%=contato._id%>" method="post">
+                                <%}else{%>
+                                    <form class="form-contatos" action="/contatos/criar" method="POST">
+                                        <%}%>
+
+                                            <div class="form-group">
+                                                <label>Nome</label>
+                                                <input value="<%= contato.nome%>" name="nome" type="text"
+                                                    class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Sobrenome</label>
+                                                <input value="<%= contato.sobrenome %>" name="sobrenome" type="text"
+                                                    class="form-control" id="exampleInputPassword1" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input value="<%= contato.email %>" name="email" type="text"
+                                                    class="form-control" id="exampleInputPassword1" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Telefone</label>
+                                                <input value="<%= contato.telefone %>" name="telefone" type="text"
+                                                    class="form-control" id="exampleInputPassword1" placeholder="">
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary">Salvar</button>
+                                    </form>
 
                 </div>
 

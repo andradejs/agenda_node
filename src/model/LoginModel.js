@@ -45,23 +45,21 @@ class Login {
 
     async cadastrar() {
 
+      
         this.validar()
-
+      
         if (this.erros.length > 0) return;
 
         await this.isUserExistente()
 
         if (this.erros.length > 0) return;
 
-        try {
+     
             const salt = bcryptjs.genSaltSync();
             this.body.senha = bcryptjs.hashSync(this.body.senha, salt)
             this.user = await LoginModel.create(this.body)
 
-        } catch (e) {
-            console.log(e)
-
-        }
+   
     }
 
     async isUserExistente() {
@@ -84,7 +82,6 @@ class Login {
             this.erros.push('A senha deve ter entre 3 á 50 caracteres')
 
         }
-
     }
 
     clienUp() {
@@ -99,7 +96,7 @@ class Login {
         this.body = {
             email: this.body.email,
             senha: this.body.senha
-        }
+        };
 
     }
 }

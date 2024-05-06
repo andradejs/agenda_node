@@ -26,5 +26,7 @@ route.get('/login/logout', loginController.logout);
 route.get('/contatos/index', checaSession, contatosController.index);
 route.get('/contatos/index/:id', checaSession, contatosController.editeIndex);
 route.post('/contatos/criar', checaSession, contatosController.criar);
+route.post('/contatos/editar/:id',checaSession,contatosController.editar)
+route.get('/contatos/deletar/:id', checaSession, contatosController.deletar);
 
 module.exports = route;
