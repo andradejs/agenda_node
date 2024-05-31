@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "dev": "webpack -w",
-    "start": "nodemon server.js --ignore public --ignore frontend"
-  },
+    "start": "nodemon server.js --ignore public --ignore frontend",
+    "build": "echo 'Nada para construir'" 
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
