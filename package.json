@@ -2,10 +2,10 @@
   "name": "ecommerce",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack -w",
-    "start": "nodemon server.js --ignore public --ignore frontend",
+    "start": "nodemon index.js --ignore public --ignore frontend",
     "build": "echo 'Nada para construir'" 
     },
   "keywords": [],
