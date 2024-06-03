@@ -1,6 +1,5 @@
 const Contato = require('../model/ContatosModel')
 
-
 exports.index = async (req, res) => {
 
     
