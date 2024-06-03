@@ -1,4 +1,5 @@
 require('dotenv').config();
+const serverless = require('serverless-http');
 
 const express = require('express');
 
@@ -56,10 +57,11 @@ app.use(middlewareGlobal);
 
 app.use(routes);
 
-app.on(true,() =>{
+module.exports.handler = serverless(app);
+// app.on(true,() =>{
     
-    app.listen(3000,()=>{
-        console.log('sevidor rodando na porta 3000');
-        console.log('Acesse: http://localhost:3000');
-    });
-})
+//     app.listen(3000,()=>{
+//         console.log('sevidor rodando na porta 3000');
+//         console.log('Acesse: http://localhost:3000');
+//     });
+// })
