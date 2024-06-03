@@ -1,6 +1,8 @@
 [build]
-command = "npm run build" # Comando de build, se houver
-functions = "functions" # Diretório das funções serverless
+  command = "npm install && npm run build"
+  functions = "functions"
 
-[dev]
-command = "npm start" # Comando para rodar seu servidor localmente
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200

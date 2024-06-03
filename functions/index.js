@@ -17,11 +17,11 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash')
 
-const routes = require('./routes');
+const routes = require('../routes');
 const path = require('path');
 const helmet = require('helmet');
 const csrf = require('csurf');
-const {middlewareGlobal,checkCsrfErro,criarTokenCsrf} = require('./src/middlewares/middleware');
+const {middlewareGlobal,checkCsrfErro,criarTokenCsrf} = require('../src/middlewares/middleware');
 const cookieParser = require('cookie-parser');
 
 
