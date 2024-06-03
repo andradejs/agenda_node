@@ -1,0 +1,6 @@
+[build]
+command = "npm run build" # Comando de build, se houver
+functions = "functions" # Diretório das funções serverless
+
+[dev]
+command = "npm start" # Comando para rodar seu servidor localmente
