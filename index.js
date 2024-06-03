@@ -45,8 +45,8 @@ app.use(confgSession)
 app.use(flash())
 
 
-app.set(`views`,path.resolve(__dirname,'src','views'));
 app.set(`view engine`,'ejs');
+app.set(`views`,path.resolve(__dirname,'src','views'));
 
 app.use(cookieParser());
 app.use(csrf({cookie:true}));
